@@ -3,9 +3,9 @@
 
 ---
 
-### :man_technologist: Обо мне:
+### Обо мне:
 
-Я начинающий веб разработчик<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30px">. Мой путь в it начался со Школы 21 от Сбера, где я прошел интенсив. После интенсива был промежуток в пару месяцев, где я пробовал себя во многих направлениях, пробовал изучать язык Си, Python, попробовал свои силы в data science, но больше всего меня зацепила веб разработка! С мая 2022 года по апрель 2023 я изучал веб разработку на курсах Яндекс Практикум. В настоящий момент мое обучение на курсе завершено и я нашел свою первую работу!
+Я начинающий разработчик игр. Изучал язык Си, Python. Больше всего меня зацепила разработка игр!
 
 <p align="center">
  <img width="600" src="assets/github-snake.svg" alt="snake"/>
@@ -77,7 +77,7 @@
 
 ---
 
-<!-- ### 💻 Пройденные курсы:
+### 💻 Пройденные курсы:
 
 | Курсы                                                           | Дата              |
 | ----------------------------------------------------------------| :---------------: |
@@ -89,24 +89,3 @@
 | stepik.org/JavaScript для начинающих                            | 01/2023 - 01/2023 |
 | stepik.org/Web-технологии: начальный уровень                    | 01/2023 - 01/2023 |
 | practicum.yandex/Факультет Веб разработки                       | 05/2022 - xx/2023 |
-
---- -->
-
-### 💻 Codewars:
-
-![codewars](https://www.codewars.com/users/FilimonovAlexey/badges/large)
-
-### ⚙️ GitHub статистика:
-
-<table>
-  <tr>
-    <td>
-      <img align="left" src="http://github-readme-streak-stats.herokuapp.com?user=FilimonovAlexey&theme=dark&background=000000" alt="webDev's Github stats" />
-    </td>
-    <td>
-      <img height="195px" align="right" alt="webDev's Github Languages" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=FilimonovAlexey&layout=compact&theme=vision-friendly-dark" />
-    </td>
-  </tr>
-</table>
-
-![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=filimonovalexey)
