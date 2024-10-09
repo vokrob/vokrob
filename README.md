@@ -1,16 +1,49 @@
-## Hi there 👋
+# 🚀 Welcome to my profile!
 
-<!--
-**vokrob/vokrob** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+👋 I am Danil Borkov, Android developer, hardware and software adjuster
 
-Here are some ideas to get you started:
+🎓 Graduate of the Altai Polytechnic College, student of the Altai State University
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🛠️ My skills
+
+**Development environments:**
+
+[![My Skills](https://skillicons.dev/icons?i=androidstudio,visualstudio&theme=light)](https://skillicons.dev)
+
+**Programming languages:**
+
+[![My Skills](https://skillicons.dev/icons?i=java,kotlin,c,py&theme=light)](https://skillicons.dev)
+
+**Operating systems:**
+
+[![My Skills](https://skillicons.dev/icons?i=windows,linux,ubuntu&theme=light)](https://skillicons.dev)
+
+**Tools and technologies:**
+
+[![My Skills](https://skillicons.dev/icons?i=git,gradle,sqlite,firebase,figma,bash,powershell&theme=light)](https://skillicons.dev)
+
+## 📊 My activity
+
+<img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&width=500&height=200" alt="Code::Stats History Graph"/>
+
+**More details:** https://codestats.net/users/vokrob
+
+## 🏆 Certificates
+
+<aside>
+  
+| Courses completed | Platform |
+| ---              | ---       |
+| Basics of C programming. Tasks | [Stepik Certificate](https://stepik.org/cert/2489931?lang=en) |
+
+</aside>
+
+## 🤝 Contact me
+
+<div>
+  <a href="mailto:vokrob1337@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" width="40" height="40" alt="Gmail"></a>
+  <a href="https://vk.com/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" width="40" height="40" alt="VK Badge"></a> 
+  <a href="https://t.me/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="40" height="40" alt="Telegram"></a>
+  <a href="https://discord.com/users/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" width="40" height="40" alt="Discord"></a> 
+
+</div>
