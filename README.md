@@ -6,6 +6,10 @@
 
 ## 🛠️ My skills
 
+**Operating systems:**
+
+[![My Skills](https://skillicons.dev/icons?i=windows,ubuntu,kali&theme=light)](https://skillicons.dev)
+
 **Development environments:**
 
 [![My Skills](https://skillicons.dev/icons?i=androidstudio,visualstudio&theme=light)](https://skillicons.dev)
@@ -13,10 +17,6 @@
 **Programming languages:**
 
 [![My Skills](https://skillicons.dev/icons?i=java,kotlin,c,py&theme=light)](https://skillicons.dev)
-
-**Operating systems:**
-
-[![My Skills](https://skillicons.dev/icons?i=windows,linux,ubuntu&theme=light)](https://skillicons.dev)
 
 **Tools and technologies:**
 
