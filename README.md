@@ -12,11 +12,11 @@
 
 **Development environments:**
 
-[![My Skills](https://skillicons.dev/icons?i=androidstudio,visualstudio&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=androidstudio,visualstudio,arduino&theme=light)](https://skillicons.dev)
 
 **Programming languages:**
 
-[![My Skills](https://skillicons.dev/icons?i=java,kotlin,c,py&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=kotlin,java,c,py&theme=light)](https://skillicons.dev)
 
 **Tools and technologies:**
 
