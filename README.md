@@ -1,32 +1,36 @@
-# 🚀 Welcome to my profile!
+![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)
 
-👋 I am Danil Borkov, Android developer, hardware and software adjuster
-
-🎓 Graduate of the Altai Polytechnic College, student of the Altai State University
+<p align="center">
+<img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&pause=1000&color=00FF00&background=FFFFFF00&width=435&lines=Welcome+to+my+profile!&center=true"; alt="Typing SVG" />
+</p>
 
 ## 🛠️ My skills
 
 **Operating systems:**
 
-[![My Skills](https://skillicons.dev/icons?i=windows,ubuntu,kali&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=windows,ubuntu,kali&theme=dark)](https://skillicons.dev)
 
 **Development environments:**
 
-[![My Skills](https://skillicons.dev/icons?i=androidstudio,visualstudio,arduino&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=androidstudio,visualstudio,arduino&theme=dark)](https://skillicons.dev)
 
 **Programming languages:**
 
-[![My Skills](https://skillicons.dev/icons?i=kotlin,java,c,py&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=kotlin,java,c,py&theme=dark)](https://skillicons.dev)
 
 **Tools and technologies:**
 
-[![My Skills](https://skillicons.dev/icons?i=git,gradle,sqlite,firebase,figma,bash,powershell&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=git,gradle,sqlite,firebase,figma,bash,powershell&theme=dark)](https://skillicons.dev)
 
 ## 📊 My activity
 
-<img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&width=500&height=200" alt="Code::Stats History Graph"/>
+<p align="center">
+<img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=12" alt="Code::Stats history graph" />
+</p>
 
-**More details:** https://codestats.net/users/vokrob
+<p align="right">
+More details: https://codestats.net/users/vokrob
+</p>
 
 ## 🏆 Certificates
 
@@ -48,6 +52,8 @@
 
 </div>
 
-## 🐍 Snake
-
 <img src="https://raw.githubusercontent.com/vokrob/vokrob/output/snake.svg" width = 1500 alt="Snake animation" />
+
+<div align="right">
+<img src="https://komarev.com/ghpvc/?username=vokrob&color=blue" alt="Profile Views Counter" />
+</div>
