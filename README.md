@@ -47,3 +47,7 @@
   <a href="https://discord.com/users/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" width="40" height="40" alt="Discord"></a> 
 
 </div>
+
+## 🐍 Snake
+
+<img src="https://raw.githubusercontent.com/vokrob/vokrob/output/snake.svg" width = 1500 alt="Snake animation" />
