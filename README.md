@@ -59,5 +59,5 @@ More details: https://codestats.net/users/vokrob
 <img src="https://raw.githubusercontent.com/vokrob/vokrob/output/snake.svg" width = 1500 alt="Snake animation" />
 
 <div align="right">
-<img src="https://komarev.com/ghpvc/?username=vokrob&color=blue" alt="Profile Views Counter" />
+<img src="https://komarev.com/ghpvc/?username=vokrob&color=brightgreen" alt="Profile Views"/>
 </div>
