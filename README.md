@@ -43,6 +43,7 @@ More details: https://codestats.net/users/vokrob
 | Courses completed | Platform |
 | ---              | ---       |
 | Basics of C programming. Tasks | [Stepik Certificate](https://stepik.org/cert/2489931?lang=en) |
+| Development of mobile applications for Android | [Stepik Certificate](https://stepik.org/cert/2651887?lang=en) | 
 
 </aside>
 
