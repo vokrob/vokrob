@@ -4,14 +4,19 @@
 <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&pause=1000&color=00FF00&background=FFFFFF00&width=435&lines=Welcome+to+my+profile!&center=true"; alt="Typing SVG" />
 </p>
 
+##
+
 <p align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=vokrob&theme=matrix&no-frame=true&column=8"; alt="vokrob's GitHub trophies"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true" alt="vokrob's GitHub trophies"/>
 </p>
 
-## 
+##
+
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=vokrob&theme=dark&hide_border=true" alt="vokrob's GitHub streak"/>
 </p>
+
+
 
 ## 🛠️ My stack
 
@@ -50,7 +55,11 @@ More details: https://codestats.net/users/vokrob
   <a href="https://discord.com/users/vokrob.dev" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" width="40" height="40" alt="Discord"></a> 
 </div>
 
+##
+
 <img src="https://raw.githubusercontent.com/vokrob/vokrob/output/snake.svg" width = 1500 alt="Snake animation" />
+
+##
 
 <div align="right">
 <img src="https://komarev.com/ghpvc/?username=vokrob&color=brightgreen" alt="Profile Views"/>
