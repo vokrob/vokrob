@@ -13,10 +13,8 @@
 ##
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vokrob&theme=dark&hide_border=true" alt="vokrob's GitHub streak"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vokrob&theme=merko&hide_border=true" alt="vokrob's GitHub streak"/>
 </p>
-
-
 
 ## 🛠️ My stack
 
