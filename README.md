@@ -5,10 +5,15 @@
 </p>
 
 <p align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=vokrob&theme=matrix&no-frame=true&column=8"; alt="vokrob's GitHub trophies"/>
+</p>
+
+## 
+<p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=vokrob&theme=dark&hide_border=true" alt="vokrob's GitHub streak"/>
 </p>
 
-## 🛠️ My skills
+## 🛠️ My stack
 
 **Operating systems:**
 
@@ -22,7 +27,7 @@
 
 [![My Skills](https://skillicons.dev/icons?i=kotlin,java,c,py&theme=dark)](https://skillicons.dev)
 
-**Tools and technologies:**
+**Development tools:**
 
 [![My Skills](https://skillicons.dev/icons?i=git,gradle,sqlite,firebase,figma,bash,powershell&theme=dark)](https://skillicons.dev)
 
@@ -35,17 +40,6 @@
 <p align="right">
 More details: https://codestats.net/users/vokrob
 </p>
-
-## 🏆 Certificates
-
-<aside>
-  
-| Courses completed | Platform |
-| ---              | ---       |
-| Basics of C programming. Tasks | [Stepik Certificate](https://stepik.org/cert/2489931?lang=en) |
-| Development of mobile applications for Android | [Stepik Certificate](https://stepik.org/cert/2651887?lang=en) | 
-
-</aside>
 
 ## 🤝 Contact me
 
