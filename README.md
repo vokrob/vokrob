@@ -1,7 +1,7 @@
 ![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)
 
 <p align="center">
-<img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&pause=1000&color=00FF00&background=FFFFFF00&width=435&lines=Welcome+to+my+profile!&center=true"; alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&color=00FF00&background=FFFFFF00&lines=Welcome+to+my+profile!;My+name+is+Danil+Borkov;I'm+an+Android+Developer&center=true"; alt="Typing SVG" />
 </p>
 
 ##
@@ -37,11 +37,11 @@
 ## 📊 My activity
 
 <p align="center">
-<img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=12" alt="Code::Stats history graph" />
+  <img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=12" alt="Code::Stats history graph" />
 </p>
 
 <p align="right">
-More details: https://codestats.net/users/vokrob
+  More details: https://codestats.net/users/vokrob
 </p>
 
 ## 🤝 Contact me
@@ -60,5 +60,5 @@ More details: https://codestats.net/users/vokrob
 ##
 
 <div align="right">
-<img src="https://komarev.com/ghpvc/?username=vokrob&color=brightgreen" alt="Profile Views"/>
+  <img src="https://komarev.com/ghpvc/?username=vokrob&color=brightgreen" alt="Profile Views"/>
 </div>
