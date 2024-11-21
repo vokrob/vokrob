@@ -7,12 +7,6 @@
 ##
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true" alt="vokrob's GitHub trophies"/>
-</p>
-
-##
-
-<p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=vokrob&theme=merko&hide_border=true" alt="vokrob's GitHub streak"/>
 </p>
 
