@@ -12,21 +12,17 @@
 
 ## 🛠️ My stack
 
-**Operating systems:**
-
-[![My Skills](https://skillicons.dev/icons?i=windows,ubuntu,kali&theme=dark)](https://skillicons.dev)
-
 **Development environments:**
 
-[![My Skills](https://skillicons.dev/icons?i=androidstudio,arduino,visualstudio,pycharm&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=androidstudio,arduino,pycharm&theme=dark)](https://skillicons.dev)
 
 **Programming languages:**
 
-[![My Skills](https://skillicons.dev/icons?i=kotlin,java,c,py&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=kotlin,java,py&theme=dark)](https://skillicons.dev)
 
 **Development tools:**
 
-[![My Skills](https://skillicons.dev/icons?i=git,gradle,maven,sqlite,firebase,figma,bash,powershell&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=gradle,sqlite,firebase&theme=dark)](https://skillicons.dev)
 
 ## 📊 My activity
 
