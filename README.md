@@ -26,7 +26,7 @@
 
 **Development tools:**
 
-[![My Skills](https://skillicons.dev/icons?i=git,gradle,sqlite,firebase,figma,bash,powershell&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=git,gradle,maven,sqlite,firebase,figma,bash,powershell&theme=dark)](https://skillicons.dev)
 
 ## 📊 My activity
 
