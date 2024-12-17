@@ -10,10 +10,6 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=vokrob&theme=merko&hide_border=true" alt="vokrob's GitHub streak"/>
 </div>
 
-<div align="right">
-  <img src="https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg" alt="wakatime" />
-</div>
-
 ## 🛠️ My stack
 
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=kotlin,androidstudio,jetpackcompose,gradle,git,sqlite,firebase)
@@ -21,12 +17,16 @@
 ## 📊 My activity
 
 <div align="center">
-  <img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=12" alt="Code::Stats history graph" />
+  <a href="https://codestats.net/users/vokrob" target="_blank">
+    <img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=12" alt="Code::Stats history graph" />
+  </a>
 </div>
 
-<p align="right">
-  More details: https://codestats.net/users/vokrob
-</p>
+<div align="right">
+  <a href="https://wakatime.com/@c2eea5ba-3079-4fa5-8d83-15f10e89cc66">
+    <img src="https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg" alt="wakatime" />
+  </a>
+</div>
 
 ## 🤝 Contact me
 
