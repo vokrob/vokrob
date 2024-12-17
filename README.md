@@ -1,34 +1,28 @@
 ![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)
 
-<p align="center">
+<div align="center">
   <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&color=00FF00&background=FFFFFF00&lines=Welcome+to+my+profile!;My+name+is+Danil+Borkov;I'm+an+Android+Developer&center=true"; alt="Typing SVG" />
-</p>
+</div>
 
 ##
 
-<p align="center">
+<div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=vokrob&theme=merko&hide_border=true" alt="vokrob's GitHub streak"/>
-</p>
+</div>
+
+<div align="right">
+  <img src="https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg" alt="wakatime" />
+</div>
 
 ## 🛠️ My stack
 
-**Development environments:**
-
-[![My Skills](https://skillicons.dev/icons?i=androidstudio,arduino,pycharm&theme=dark)](https://skillicons.dev)
-
-**Programming languages:**
-
-[![My Skills](https://skillicons.dev/icons?i=kotlin,java,py&theme=dark)](https://skillicons.dev)
-
-**Development tools:**
-
-[![My Skills](https://skillicons.dev/icons?i=gradle,sqlite,firebase&theme=dark)](https://skillicons.dev)
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=kotlin,androidstudio,jetpackcompose,gradle,git,sqlite,firebase)
 
 ## 📊 My activity
 
-<p align="center">
+<div align="center">
   <img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=12" alt="Code::Stats history graph" />
-</p>
+</div>
 
 <p align="right">
   More details: https://codestats.net/users/vokrob
@@ -50,5 +44,5 @@
 ##
 
 <div align="right">
-  <img src="https://komarev.com/ghpvc/?username=vokrob&color=brightgreen" alt="Profile Views"/>
+  <img src="https://visitcount.itsvg.in/api?id=vokrob&label=Views&color=8&icon=5&pretty=false" />
 </div>
