@@ -44,5 +44,7 @@
 ##
 
 <div align="right">
-  <img src="https://visitcount.itsvg.in/api?id=vokrob&label=Views&color=8&icon=5&pretty=false" />
+  <a href="https://visitcount.itsvg.in">
+    <img src="https://visitcount.itsvg.in/api?id=vokrob&label=Views&color=8&icon=5&pretty=false" />
+  </a>
 </div>
