@@ -4,11 +4,13 @@
   <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&color=00FF00&background=FFFFFF00&lines=Welcome+to+my+profile!;My+name+is+Danil+Borkov;I'm+an+Android+Developer&center=true"; alt="Typing SVG" />
 </div>
 
-##
+___
 
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=vokrob&theme=merko&hide_border=true" alt="vokrob's GitHub streak"/>
 </div>
+
+___
 
 ## 🛠️ My stack
 
@@ -37,11 +39,11 @@
   <a href="https://discord.com/users/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" width="40" height="40" alt="Discord"></a> 
 </div>
 
-##
+___
 
 <img src="https://raw.githubusercontent.com/vokrob/vokrob/output/snake.svg" width = 1500 alt="Snake animation" />
 
-##
+___
 
 <div align="right">
   <a href="https://visitcount.itsvg.in">
