@@ -12,11 +12,11 @@ ___
 
 ___
 
-## 🛠️ My stack
+## 🛠️ **My stack**
 
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=kotlin,androidstudio,jetpackcompose,gradle,git,sqlite,firebase)
 
-## 📊 My activity
+## 📊 **My activity**
 
 <div align="center">
   <a href="https://codestats.net/users/vokrob" target="_blank">
@@ -30,7 +30,7 @@ ___
   </a>
 </div>
 
-## 🤝 Contact me
+## 🤝 **Contact me**
 
 <div>
   <a href="mailto:vokrob.dev@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" width="40" height="40" alt="Gmail"></a>
