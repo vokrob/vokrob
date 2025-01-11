@@ -44,7 +44,5 @@
 #
 
 <div align="right">
-  <a href="https://visitcount.itsvg.in">
-    <img src="https://visitcount.itsvg.in/api?id=vokrob&label=Views&color=8&icon=5&pretty=false" />
-  </a>
+  <img src="https://komarev.com/ghpvc/?username=vokrob&color=blue" alt="Profile Views"/>
 </div>
