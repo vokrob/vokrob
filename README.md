@@ -32,6 +32,7 @@
 
 <div>
   <a href="mailto:vokrob.dev@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" width="40" height="40" alt="Gmail"></a>
+  <a href="https://www.linkedin.com/in/vokrob-dev" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40" height="40" alt="LinkedIn Badge"></a>
   <a href="https://vk.com/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" width="40" height="40" alt="VK Badge"></a> 
   <a href="https://t.me/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="40" height="40" alt="Telegram"></a>
   <a href="https://discord.com/users/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" width="40" height="40" alt="Discord"></a> 
