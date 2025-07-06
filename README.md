@@ -12,9 +12,25 @@
 
 #
 
-## 🛠️ **My stack**
+## 🛠️ My stack
 
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=kotlin,androidstudio,jetpackcompose,gradle,git,sqlite,firebase)
+**Native development:**
+
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=androidstudio,kotlin,gradle,jetpackcompose,sqlite,firebase)
+
+**Cross-platform development:**
+
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,typescript,reactnative,expo,nodejs,djangorestframework,sqlite)
+
+**Desktop development:**
+
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,pygame)
+
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=visualstudio,cs,dotnet)
+
+**Web development:**
+
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,html,css,php,composer,twig,yii,perl,mysql,apache,json)
 
 ## 📊 **My activity**
 
