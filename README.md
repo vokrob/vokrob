@@ -20,7 +20,7 @@
 
 **Cross-platform development:**
 
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,typescript,reactnative,expo,nodejs,djangorestframework,sqlite)
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,typescript,reactnative,expo,django,djangorestframework,sqlite)
 
 **Desktop development:**
 
@@ -30,7 +30,7 @@
 
 **Web development:**
 
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,html,css,php,composer,twig,yii,perl,mysql,apache,json)
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,html,css,twig,php,yii,composer,mysql,apache)
 
 ## 📊 **My activity**
 
