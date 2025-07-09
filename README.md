@@ -26,12 +26,6 @@
 
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,pygame)
 
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=visualstudio,cs,dotnet)
-
-**Web development:**
-
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,html,css,twig,php,yii,composer,mysql,apache)
-
 ## 📊 **My activity**
 
 <div align="center">
