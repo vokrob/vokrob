@@ -24,7 +24,7 @@
 
 **Desktop development:**
 
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,pygame)
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,qt)
 
 ## 📊 **My activity**
 
