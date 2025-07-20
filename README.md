@@ -12,21 +12,17 @@
   </a>
 </p>
 
-## 🛠️ My stack
+## My stack
 
-**Native development:**
+**Android & Multiplatform:**
 
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=androidstudio,kotlin,gradle,jetpackcompose,sqlite,firebase)
 
-**Cross-platform development:**
-
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,typescript,reactnative,expo,django,djangorestframework,sqlite)
-
-**Desktop development:**
+**Desktop:**
 
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,qt)
 
-## 📊 **My activity**
+## **My activity**
 
 <div align="center">
   <a href="https://codestats.net/users/vokrob" target="_blank">
@@ -40,7 +36,7 @@
   </a>
 </div>
 
-## 🤝 **Contact me**
+## **Contact me**
 
 <div>
   <a href="mailto:vokrob.dev@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" width="40" height="40" alt="Gmail"></a>
