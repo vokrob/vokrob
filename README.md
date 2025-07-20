@@ -14,7 +14,7 @@
 
 ## My stack
 
-**Android & Multiplatform:**
+**Native & Multiplatform:**
 
 ![My Skills](https://go-skill-icons.vercel.app/api/icons?i=androidstudio,kotlin,gradle,jetpackcompose,sqlite,firebase)
 
