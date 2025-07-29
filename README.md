@@ -12,16 +12,6 @@
   </a>
 </p>
 
-## My stack
-
-**Native & Multiplatform:**
-
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=androidstudio,kotlin,gradle,jetpackcompose,sqlite,firebase)
-
-**Desktop:**
-
-![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,python,qt)
-
 ## **My activity**
 
 <div align="center">
