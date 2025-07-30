@@ -4,7 +4,7 @@
   <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&color=00FF00&background=FFFFFF00&lines=Welcome+to+my+profile!;My+name+is+Danil+Borkov;I'm+an+Android+Developer&center=true"; alt="Typing SVG" />
 </div>
 
-#
+___
 
 <p align="center">
   <a href="https://github.com/vokrob/github-profile-trophy">
@@ -12,7 +12,7 @@
   </a>
 </p>
 
-## **My activity**
+___
 
 <div align="center">
   <a href="https://codestats.net/users/vokrob" target="_blank">
@@ -22,26 +22,26 @@
 
 <div align="right">
   <a href="https://wakatime.com/@c2eea5ba-3079-4fa5-8d83-15f10e89cc66">
-    <img src="https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg" alt="wakatime" />
+    <img src="https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg?color=178600" alt="wakatime" />
   </a>
 </div>
 
-## **Contact me**
-
-<div>
-  <a href="mailto:vokrob.dev@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" width="40" height="40" alt="Gmail"></a>
-  <a href="https://www.linkedin.com/in/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40" height="40" alt="LinkedIn Badge"></a>
-  <a href="https://vk.com/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" width="40" height="40" alt="VK Badge"></a> 
-  <a href="https://t.me/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="40" height="40" alt="Telegram"></a>
-  <a href="https://discord.com/users/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" width="40" height="40" alt="Discord"></a> 
-</div>
-
-#
+___
 
 <img src="https://raw.githubusercontent.com/vokrob/vokrob/output/snake.svg" width = 1500 alt="Snake animation" />
 
-#
+___
 
 <div align="right">
-  <img src="https://komarev.com/ghpvc/?username=vokrob&color=blue" alt="Profile Views"/>
+  <img src="https://komarev.com/ghpvc/?username=vokrob&color=178600" alt="Profile Views" />
 </div>
+
+<p align="center">
+  <kbd>
+    <a href="mailto:vokrob.dev@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" width="40" height="40" alt="Gmail"></a>
+    <a href="https://www.linkedin.com/in/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40" height="40" alt="LinkedIn"></a>
+    <a href="https://vk.com/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" width="40" height="40" alt="VK"></a>
+    <a href="https://t.me/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="40" height="40" alt="Telegram"></a>
+    <a href="https://discord.com/users/vokrob" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" width="40" height="40" alt="Discord"></a>
+  </kbd>
+</p>
