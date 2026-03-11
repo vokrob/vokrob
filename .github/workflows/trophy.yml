@@ -1,0 +1,33 @@
+name: Update Trophy
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # воскресенье
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Generate trophy
+      run: |
+        git clone https://github.com/lucthienphong1120/github-trophies temp
+        cd temp
+        npm ci --production
+        USERNAME=vokrob THEME=matrix ROW=1 COLUMN=3 NO_FRAME=true NO_BG=true npm run build
+        mkdir -p ../images
+        cp public/vokrob.svg ../images/trophy.svg
+        cd ..
+        rm -rf temp
+    
+    - name: Commit trophy
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: '♨ Update trophy'
+        file_pattern: images/*
