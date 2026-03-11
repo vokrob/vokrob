@@ -1,8 +1,8 @@
 name: Update Trophy
 on:
   schedule:
-    - cron: '0 0 * * 0' # Раз в неделю по воскресеньям
-  workflow_dispatch: # Позволяет запускать вручную
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -10,38 +10,28 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+
+      - name: Generate Trophies
+        uses: ryo-ma/github-profile-trophy@master
         with:
-          node-version: 20
-          # Кэш удален, так как в корне нет package-lock.json
+          screen_name: vokrob
+          # Настройки стиля
+          theme: matrix
+          no-frame: true
+          no-bg: true
+          column: 3
 
-      - name: Generate trophy
+      # Файл автоматически создается в корне или указанной папке.
+      # По умолчанию этот экшн сам может коммитить, но мы сделаем это явно.
+
+      - name: Move and Commit
         run: |
-          # 1. Клонируем репозиторий генератора
-          git clone https://github.com/lucthienphong1120/github-trophies generator
-          cd generator
-          
-          # 2. Устанавливаем зависимости (все, включая dev)
-          npm install
-          
-          # 3. Запускаем сборку трофея
-          USERNAME=vokrob THEME=matrix ROW=1 COLUMN=3 NO_FRAME=true NO_BG=true npm run build
-          
-          # 4. Возвращаемся в корень и копируем результат
-          cd ..
           mkdir -p images
-          
-          if [ -f "generator/public/vokrob.svg" ]; then
-            cp generator/public/vokrob.svg images/trophy.svg
-            echo "✅ Trophy generated successfully"
-          else
-            echo "❌ Error: File not found in generator/public/vokrob.svg"
-            exit 1
-          fi
+          # Экшн ryo-ma генерирует файл с именем по умолчанию или в папку
+          # Если вы хотите сохранить его в images/trophy.svg:
+          mv trophy.svg images/trophy.svg || true
 
-      - name: Commit trophy
+      - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: '♨ Update trophy'
