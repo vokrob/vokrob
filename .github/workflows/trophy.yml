@@ -1,8 +1,8 @@
 name: Update Trophy
 on:
   schedule:
-    - cron: '0 0 * * 0'
-  workflow_dispatch:
+    - cron: '0 0 * * 0' # Раз в неделю по воскресеньям
+  workflow_dispatch: # Позволяет запускать вручную
 
 jobs:
   update:
@@ -12,24 +12,34 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Setup Node.js
-        uses: actions/setup-node@v4 # Используем стабильную v4 (или v5, если хотите)
+        uses: actions/setup-node@v4
         with:
-          node-version: 20 # 20 вполне достаточно для сборки
+          node-version: 20
+          # Кэш удален, так как в корне нет package-lock.json
 
       - name: Generate trophy
         run: |
-          # Клонируем репозиторий генератора
-          git clone https://github.com/lucthienphong1120/github-trophies temp
-          cd temp
-          # Устанавливаем зависимости внутри папки генератора
+          # 1. Клонируем репозиторий генератора
+          git clone https://github.com/lucthienphong1120/github-trophies generator
+          cd generator
+          
+          # 2. Устанавливаем зависимости (все, включая dev)
           npm install
-          # Генерируем трофей
+          
+          # 3. Запускаем сборку трофея
           USERNAME=vokrob THEME=matrix ROW=1 COLUMN=3 NO_FRAME=true NO_BG=true npm run build
-          # Создаем папку в основном репозитории и копируем результат
-          mkdir -p ../images
-          cp public/vokrob.svg ../images/trophy.svg
+          
+          # 4. Возвращаемся в корень и копируем результат
           cd ..
-          rm -rf temp
+          mkdir -p images
+          
+          if [ -f "generator/public/vokrob.svg" ]; then
+            cp generator/public/vokrob.svg images/trophy.svg
+            echo "✅ Trophy generated successfully"
+          else
+            echo "❌ Error: File not found in generator/public/vokrob.svg"
+            exit 1
+          fi
 
       - name: Commit trophy
         uses: stefanzweifel/git-auto-commit-action@v5
