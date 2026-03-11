@@ -14,22 +14,17 @@ jobs:
       - name: Generate Trophies
         uses: ryo-ma/github-profile-trophy@master
         with:
-          screen_name: vokrob
-          # Настройки стиля
+          username: vokrob
           theme: matrix
-          no-frame: true
-          no-bg: true
-          column: 3
-
-      # Файл автоматически создается в корне или указанной папке.
-      # По умолчанию этот экшн сам может коммитить, но мы сделаем это явно.
+          # Здесь мы убрали лишние параметры, которые вызывали ошибку.
+          # Сначала проверим, что он просто создаст файл.
 
       - name: Move and Commit
         run: |
           mkdir -p images
-          # Экшн ryo-ma генерирует файл с именем по умолчанию или в папку
-          # Если вы хотите сохранить его в images/trophy.svg:
-          mv trophy.svg images/trophy.svg || true
+          # Экшн создает файл по пути github-profile-trophy.svg или похожему.
+          # Попробуем найти его и переместить.
+          mv *.svg images/trophy.svg || true
 
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
