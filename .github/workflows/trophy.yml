@@ -3,31 +3,36 @@ on:
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v5  # v5 = Node 24 native
-      with:
-        node-version: 24
-        cache: 'npm'
-    
-    - name: Generate trophy
-      run: |
-        git clone https://github.com/lucthienphong1120/github-trophies temp
-        cd temp
-        npm install --production  # ✅ npm install вместо ci
-        USERNAME=vokrob THEME=matrix ROW=1 COLUMN=3 NO_FRAME=true NO_BG=true npm run build
-        mkdir -p ../images
-        cp public/vokrob.svg ../images/trophy.svg
-        cd ..
-        rm -rf temp
-    
-    - name: Commit trophy
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: '♨ Update trophy'
-        file_pattern: images/*
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4 # Используем стабильную v4 (или v5, если хотите)
+        with:
+          node-version: 20 # 20 вполне достаточно для сборки
+
+      - name: Generate trophy
+        run: |
+          # Клонируем репозиторий генератора
+          git clone https://github.com/lucthienphong1120/github-trophies temp
+          cd temp
+          # Устанавливаем зависимости внутри папки генератора
+          npm install
+          # Генерируем трофей
+          USERNAME=vokrob THEME=matrix ROW=1 COLUMN=3 NO_FRAME=true NO_BG=true npm run build
+          # Создаем папку в основном репозитории и копируем результат
+          mkdir -p ../images
+          cp public/vokrob.svg ../images/trophy.svg
+          cd ..
+          rm -rf temp
+
+      - name: Commit trophy
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: '♨ Update trophy'
+          file_pattern: 'images/trophy.svg'
