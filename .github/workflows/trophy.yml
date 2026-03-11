@@ -1,36 +1,26 @@
 name: Update Trophy
-
 on:
   schedule:
     - cron: "0 0 * * 0"
   workflow_dispatch:
   push:
     branches:
-      - main # или master, проверьте имя основной ветки
+      - main
 
 jobs:
   update:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate Trophies
-        uses: ryo-ma/github-profile-trophy@master
-        with:
-          username: ${{ github.repository_owner }}
-          theme: matrix
-          # Сохраняем временно в корень, потом переместим
-          
-      - name: Prepare dist folder
+      - name: Generate Trophy via Curl
         run: |
           mkdir -p dist
-          # Экшен ryo-ma создает файл github-profile-trophy.svg по умолчанию
-          mv github-profile-trophy.svg dist/trophy.svg || mv trophy.svg dist/trophy.svg || true
+          # Мы просто скачиваем готовую картинку напрямую с сервиса
+          curl -o dist/trophy.svg "https://github-profile-trophy.vercel.app/?username=${{ github.repository_owner }}&theme=matrix&no-frame=true&no-bg=true&column=3"
 
       - name: push trophy.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
