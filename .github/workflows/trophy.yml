@@ -1,7 +1,7 @@
 name: Update Trophy
 on:
   schedule:
-    - cron: '0 0 * * 0'  # воскресенье
+    - cron: '0 0 * * 0'
   workflow_dispatch:
 jobs:
   update:
@@ -12,14 +12,14 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: 24
         cache: 'npm'
     
     - name: Generate trophy
       run: |
         git clone https://github.com/lucthienphong1120/github-trophies temp
         cd temp
-        npm ci --production
+        npm ci
         USERNAME=vokrob THEME=matrix ROW=1 COLUMN=3 NO_FRAME=true NO_BG=true npm run build
         mkdir -p ../images
         cp public/vokrob.svg ../images/trophy.svg
