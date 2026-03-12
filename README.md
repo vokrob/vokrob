@@ -16,7 +16,7 @@ ___
 
 <div align="center">
   <a href="https://codestats.net/users/vokrob" target="_blank">
-    <img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=12" alt="Code::Stats history graph" />
+    <img src="https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=15" alt="Code::Stats history graph" />
   </a>
 </div>
 
