@@ -7,7 +7,7 @@
 ___
 
 <p align="center">
-  <a href="https://github.com/vokrob/github-profile-trophy">
+  <a href="https://github-profile-trophy-nu.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true&row=1&column=3">
     <img src="https://github-profile-trophy-nu.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true&row=1&column=3" alt="trophy" />
   </a>
 </p>
