@@ -2,11 +2,11 @@ name: Update Trophies
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *' # Каждый день в полночь
+  workflow_dispatch: # Чтобы запустить вручную
 
 permissions:
-  contents: write
+  contents: write # Разрешает экшену записывать файлы в репозиторий
 
 jobs:
   build:
@@ -14,15 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Generate Trophies
+        uses: ryo-ma/github-profile-trophy@master
         with:
-          node-size: 20
-
-      - name: Generate Trophies Locally
-        run: |
-          # Скачиваем CLI генератор и запускаем его локально
-          npx github-profile-trophy-cli --username=vokrob --theme=matrix --no-frame=true --no-bg=true --row=1 --column=3 --output=trophy.svg
+          username: vokrob
+          theme: matrix
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -30,6 +26,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          # Принудительно перезаписываем старый битый файл, если он изменился
           git add trophy.svg
           git commit -m "Update trophies" || echo "No changes to commit"
           git push origin main
