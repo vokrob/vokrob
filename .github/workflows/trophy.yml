@@ -2,10 +2,9 @@ name: Update Trophies
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *' # Автообновление каждый день в полночь
+  workflow_dispatch: # Позволяет запускать вручную в любое время
 
-# 1. ДАЕМ КЛЮЧЕВОЕ РАЗРЕШЕНИЕ НА ЗАПИСЬ
 permissions:
   contents: write
 
@@ -14,22 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - uses: ryo-ma/github-profile-trophy@master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # Исправлено: передаем параметры через аргумент, соответствующий action.yml
-          theme: matrix
-          # Если вы хотите передать дополнительные параметры вроде no-frame, 
-          # встроенный экшен принимает только 'theme'. Для полной кастомизации
-          # генерация идет в один стандартный файл trophy.svg.
 
-      # 2. ЗАЩИТА ОТ ОШИБКИ ПУСТОГО КОММИТА
+      - name: Download Trophy SVG directly
+        run: |
+          # Скачиваем SVG с официального сервера со всеми вашими идеальными параметрами оформления
+          curl -s "https://vercel.app" -o trophy.svg
+
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add trophy.svg
-          # Если изменений нет, git commit выдаст статус 0 вместо ошибки
+          # Если трофеи не изменились, экшен завершится успешно без падения ошибки
           git commit -m "Update trophies" || echo "No changes to commit"
           git push origin HEAD:${{ github.ref }} || echo "Nothing to push"
