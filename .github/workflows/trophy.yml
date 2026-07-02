@@ -1,0 +1,16 @@
+name: Update Trophies
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+        with:
+          username: vokrob
+          output_path: trophy.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
