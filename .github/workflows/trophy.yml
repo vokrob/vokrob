@@ -14,19 +14,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate Trophies
-        uses: ryo-ma/github-profile-trophy@master
-        with:
-          username: vokrob
-          theme: matrix
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download Trophies SVG
+        run: |
+          # Скачиваем SVG с основного рабочего сервера
+          curl -sL "https://vercel.app" -o trophy.svg
+          
+          # Проверяем размер: если Vercel отдал ошибку (меньше 200 байт), 
+          # то подкладываем запасную ссылку с другого живого зеркала
+          if [ $(stat -c%s "trophy.svg") -lt 200 ]; then
+            curl -sL "https://vercel.app" -o trophy.svg
+          fi
 
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          # Принудительно перезаписываем старый битый файл, если он изменился
-          git add trophy.svg
-          git commit -m "Update trophies" || echo "No changes to commit"
+          
+          # Принудительно добавляем и коммитим файл, обходя любые проверки
+          git add -A trophy.svg
+          git commit -m "Update trophies (forced)" || echo "No changes to commit"
           git push origin main
