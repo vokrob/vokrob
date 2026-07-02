@@ -14,10 +14,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download Trophies SVG
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-size: 20
+
+      - name: Generate Trophies Locally
         run: |
-          # Используем официальный резервный домен и флаг -f, чтобы падать при ошибках сервера
-          curl -f -s "https://vercel.app" -o trophy.svg
+          # Скачиваем CLI генератор и запускаем его локально
+          npx github-profile-trophy-cli --username=vokrob --theme=matrix --no-frame=true --no-bg=true --row=1 --column=3 --output=trophy.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and Push
         run: |
