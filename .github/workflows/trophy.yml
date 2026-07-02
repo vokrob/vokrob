@@ -2,11 +2,11 @@ name: Update Trophies
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Каждый день в полночь
-  workflow_dispatch: # Чтобы запустить вручную
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write # Разрешает экшену записывать файлы в репозиторий
+  contents: write
 
 jobs:
   build:
@@ -16,8 +16,8 @@ jobs:
 
       - name: Download Trophies SVG
         run: |
-          # Скачиваем SVG с нужными вам параметрами во временный файл
-          curl -s "https://vercel.app" -o trophy.svg
+          # Используем официальный резервный домен и флаг -f, чтобы падать при ошибках сервера
+          curl -f -s "https://vercel.app" -o trophy.svg
 
       - name: Commit and Push
         run: |
