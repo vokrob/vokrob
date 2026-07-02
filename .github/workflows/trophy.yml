@@ -1,0 +1,26 @@
+name: Update Trophies
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Обновление каждый день в полночь
+  workflow_dispatch: # Позволяет запускать вручную
+
+jobs:
+  update-trophy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: ryo-ma/github-profile-trophy@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Укажите нужные вам параметры (как в вашем URL)
+          options: --theme=matrix --no-frame=true --no-bg=true --row=1 --column=3
+          
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add trophy.svg
+          git commit -m "Update trophies" || exit 0
+          git push
