@@ -14,18 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      # Локально собираем SVG без отправки внешних HTTP-запросов к Vercel
-      - name: Generate SVG Locally
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download Trophy SVG with User-Agent
         run: |
-          # Скачиваем и запускаем генератор через npx напрямую из репозитория проекта
-          npx github-profile-trophy --username=vokrob --theme=matrix --no-frame=true --no-bg=true --row=1 --column=3 --output=trophy.svg
+          # Передаем заголовок браузера Chrome, чтобы сервер Vercel успешно отдал картинку
+          curl -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+          -s "https://vercel.app" \
+          -o trophy.svg
 
       - name: Commit & Push
         run: |
