@@ -3,10 +3,10 @@ name: Update Trophies
 on:
   schedule:
     - cron: '0 0 * * *' # Каждый день в полночь
-  workflow_dispatch: # Чтобы запустить вручную
+  workflow_dispatch: # Возможность запустить вручную
 
 permissions:
-  contents: write # Разрешает экшену записывать файлы в репозиторий
+  contents: write # Разрешение на запись файла в ваш репозиторий
 
 jobs:
   build:
@@ -14,23 +14,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download Trophies SVG
-        run: |
-          # Скачиваем SVG с основного рабочего сервера
-          curl -sL "https://vercel.app" -o trophy.svg
-          
-          # Проверяем размер: если Vercel отдал ошибку (меньше 200 байт), 
-          # то подкладываем запасную ссылку с другого живого зеркала
-          if [ $(stat -c%s "trophy.svg") -lt 200 ]; then
-            curl -sL "https://vercel.app" -o trophy.svg
-          fi
+      - name: Generate Trophies
+        # Используем обновленный форк экшена, который не падает по таймаутам и ошибкам Deno
+        uses: lowlighter/github-profile-trophy@master
+        with:
+          username: vokrob
+          theme: matrix
+          column: 3
+          row: 1
+          no-bg: true
+          no-frame: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          
-          # Принудительно добавляем и коммитим файл, обходя любые проверки
-          git add -A trophy.svg
-          git commit -m "Update trophies (forced)" || echo "No changes to commit"
+          git add trophy.svg
+          git commit -m "Update official trophies" || echo "No changes to commit"
           git push origin main
