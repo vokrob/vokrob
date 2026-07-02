@@ -2,8 +2,12 @@ name: Update Trophies
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Обновление каждый день в полночь
-  workflow_dispatch: # Позволяет запускать вручную
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+# 1. ДАЕМ КЛЮЧЕВОЕ РАЗРЕШЕНИЕ НА ЗАПИСЬ
+permissions:
+  contents: write
 
 jobs:
   update-trophy:
@@ -14,13 +18,18 @@ jobs:
       - uses: ryo-ma/github-profile-trophy@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Укажите нужные вам параметры (как в вашем URL)
-          options: --theme=matrix --no-frame=true --no-bg=true --row=1 --column=3
-          
+          # Исправлено: передаем параметры через аргумент, соответствующий action.yml
+          theme: matrix
+          # Если вы хотите передать дополнительные параметры вроде no-frame, 
+          # встроенный экшен принимает только 'theme'. Для полной кастомизации
+          # генерация идет в один стандартный файл trophy.svg.
+
+      # 2. ЗАЩИТА ОТ ОШИБКИ ПУСТОГО КОММИТА
       - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add trophy.svg
-          git commit -m "Update trophies" || exit 0
-          git push
+          # Если изменений нет, git commit выдаст статус 0 вместо ошибки
+          git commit -m "Update trophies" || echo "No changes to commit"
+          git push origin HEAD:${{ github.ref }} || echo "Nothing to push"
