@@ -2,11 +2,11 @@ name: Update Trophies
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-  workflow_dispatch:
+    - cron: '0 0 * * *' # Каждый день в полночь
+  workflow_dispatch: # Чтобы запустить вручную
 
 permissions:
-  contents: write
+  contents: write # Разрешает экшену записывать файлы в репозиторий
 
 jobs:
   build:
@@ -14,14 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate and Commit Trophies
-        uses: ryo-ma/github-profile-trophy@master
-        with:
-          username: vokrob
-          theme: matrix
-          column: 3
-          row: 1
-          no-bg: true
-          no-frame: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Download Trophies SVG
+        run: |
+          # Скачиваем SVG с нужными вам параметрами во временный файл
+          curl -s "https://vercel.app" -o trophy.svg
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add trophy.svg
+          git commit -m "Update trophies" || echo "No changes to commit"
+          git push origin main
