@@ -81,8 +81,50 @@ jobs:
           path: codestats.svg
           if-no-files-found: error
 
+  badges:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Typing SVG
+        run: |
+          curl -sfSL --retry 3 --retry-delay 5 -o typing.svg \
+            "https://readme-typing-svg.herokuapp.com/?font=Fira+Code&color=00FF00&background=FFFFFF00&lines=Welcome+to+my+profile;My+name+is+Danil+Borkov;I+am+a+DevOps+engineer&center=true"
+
+      - name: Validate Typing SVG
+        run: xmllint --noout typing.svg
+
+      - name: Fetch WakaTime Badge
+        run: |
+          curl -sfSL --retry 3 --retry-delay 5 -o wakatime.svg \
+            "https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg?color=178600"
+
+      - name: Validate WakaTime SVG
+        run: xmllint --noout wakatime.svg
+
+      - name: Fetch Profile Views Badge
+        run: |
+          curl -sfSL --retry 3 --retry-delay 5 -o views.svg \
+            "https://komarev.com/ghpvc/?username=vokrob&color=178600"
+
+      - name: Validate Views SVG
+        run: xmllint --noout views.svg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: badges
+          path: |
+            typing.svg
+            wakatime.svg
+            views.svg
+          if-no-files-found: error
+
   commit:
-    needs: [snake, trophies, codestats]
+    needs: [snake, trophies, codestats, badges]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -101,6 +143,9 @@ jobs:
           cp -f artifacts/snake.svg .
           cp -f artifacts/trophies.svg .
           cp -f artifacts/codestats.svg .
+          cp -f artifacts/typing.svg .
+          cp -f artifacts/wakatime.svg .
+          cp -f artifacts/views.svg .
           rm -rf artifacts
 
       - uses: stefanzweifel/git-auto-commit-action@v5
@@ -108,4 +153,4 @@ jobs:
           commit_message: 'chore: update profile assets'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          file_pattern: 'snake.svg trophies.svg codestats.svg'
+          file_pattern: 'snake.svg trophies.svg codestats.svg typing.svg wakatime.svg views.svg'
