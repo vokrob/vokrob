@@ -58,8 +58,31 @@ jobs:
           path: trophies.svg
           if-no-files-found: error
 
+  codestats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Code::Stats Graph
+        run: |
+          curl -sfSL --retry 3 --retry-delay 5 -o codestats.svg \
+            "https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=15"
+
+      - name: Validate SVG
+        run: xmllint --noout codestats.svg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: codestats
+          path: codestats.svg
+          if-no-files-found: error
+
   commit:
-    needs: [snake, trophies]
+    needs: [snake, trophies, codestats]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -77,6 +100,7 @@ jobs:
         run: |
           cp -f artifacts/snake.svg .
           cp -f artifacts/trophies.svg .
+          cp -f artifacts/codestats.svg .
           rm -rf artifacts
 
       - uses: stefanzweifel/git-auto-commit-action@v5
@@ -84,4 +108,4 @@ jobs:
           commit_message: 'chore: update profile assets'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          file_pattern: 'snake.svg trophies.svg'
+          file_pattern: 'snake.svg trophies.svg codestats.svg'
