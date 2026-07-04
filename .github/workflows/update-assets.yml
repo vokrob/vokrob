@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   snake:
@@ -15,9 +15,8 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
-      actions: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Generate Contribution Snake
         uses: Platane/snk@v3
@@ -29,7 +28,7 @@ jobs:
       - name: Validate SVG
         run: xmllint --noout snake.svg
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: snake
           path: snake.svg
@@ -40,9 +39,8 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
-      actions: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Fetch Trophies SVG
         run: |
@@ -52,7 +50,7 @@ jobs:
       - name: Validate SVG
         run: xmllint --noout trophies.svg
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: trophies
           path: trophies.svg
@@ -63,9 +61,8 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
-      actions: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Fetch Code::Stats Graph
         run: |
@@ -75,7 +72,7 @@ jobs:
       - name: Validate SVG
         run: xmllint --noout codestats.svg
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: codestats
           path: codestats.svg
@@ -86,9 +83,8 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
-      actions: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Fetch Typing SVG
         run: |
@@ -114,7 +110,7 @@ jobs:
       - name: Validate Views SVG
         run: xmllint --noout views.svg
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: badges
           path: |
@@ -131,9 +127,9 @@ jobs:
       contents: write
       actions: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           path: artifacts
           merge-multiple: true
@@ -148,7 +144,7 @@ jobs:
           cp -f artifacts/views.svg .
           rm -rf artifacts
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'chore: update profile assets'
           commit_user_name: 'github-actions[bot]'
