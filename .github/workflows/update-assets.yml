@@ -84,4 +84,4 @@ jobs:
           commit_message: 'chore: update profile assets'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          file_pattern: '*.svg'
+          file_pattern: 'snake.svg trophies.svg'
