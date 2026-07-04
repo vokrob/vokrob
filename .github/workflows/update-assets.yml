@@ -1,0 +1,87 @@
+name: Update Profile Assets
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate Contribution Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: vokrob
+          outputs: |
+            snake.svg
+
+      - name: Validate SVG
+        run: xmllint --noout snake.svg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: snake
+          path: snake.svg
+          if-no-files-found: error
+
+  trophies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Trophies SVG
+        run: |
+          curl -sfSL --retry 3 --retry-delay 5 -o trophies.svg \
+            "https://github-profile-trophy-nu.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true&row=1&column=3"
+
+      - name: Validate SVG
+        run: xmllint --noout trophies.svg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trophies
+          path: trophies.svg
+          if-no-files-found: error
+
+  commit:
+    needs: [snake, trophies]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: Stage Assets
+        run: |
+          cp -f artifacts/snake.svg .
+          cp -f artifacts/trophies.svg .
+          rm -rf artifacts
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: update profile assets'
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          file_pattern: '*.svg'
