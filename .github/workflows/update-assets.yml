@@ -94,7 +94,7 @@ jobs:
 
   badges:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     permissions:
       contents: read
     steps:
@@ -104,28 +104,25 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
       - name: Fetch Typing SVG
+        continue-on-error: true
         run: |
-          curl -sfSL --retry 3 --retry-delay 5 -o typing.svg \
+          curl -sfSL --retry 5 --retry-delay 10 --max-time 60 -o typing.svg \
             "https://readme-typing-svg.herokuapp.com/?font=Fira+Code&color=00FF00&background=FFFFFF00&lines=Welcome+to+my+profile;My+name+is+Danil+Borkov;I+am+a+DevOps+engineer&center=true"
-
-      - name: Validate Typing SVG
-        run: xmllint --noout typing.svg
+          xmllint --noout typing.svg
 
       - name: Fetch WakaTime Badge
+        continue-on-error: true
         run: |
-          curl -sfSL --retry 3 --retry-delay 5 -o wakatime.svg \
+          curl -sfSL --retry 3 --retry-delay 5 --max-time 30 -o wakatime.svg \
             "https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg?color=178600"
-
-      - name: Validate WakaTime SVG
-        run: xmllint --noout wakatime.svg
+          xmllint --noout wakatime.svg
 
       - name: Fetch Profile Views Badge
+        continue-on-error: true
         run: |
-          curl -sfSL --retry 3 --retry-delay 5 -o views.svg \
+          curl -sfSL --retry 3 --retry-delay 5 --max-time 30 -o views.svg \
             "https://komarev.com/ghpvc/?username=vokrob&color=178600"
-
-      - name: Validate Views SVG
-        run: xmllint --noout views.svg
+          xmllint --noout views.svg
 
       - uses: actions/upload-artifact@v7
         with:
@@ -134,7 +131,7 @@ jobs:
             typing.svg
             wakatime.svg
             views.svg
-          if-no-files-found: error
+          if-no-files-found: warn
 
   commit:
     needs: [snake, trophies, codestats, badges]
@@ -153,12 +150,9 @@ jobs:
 
       - name: Stage Assets
         run: |
-          cp -f artifacts/snake.svg .
-          cp -f artifacts/trophies.svg .
-          cp -f artifacts/codestats.svg .
-          cp -f artifacts/typing.svg .
-          cp -f artifacts/wakatime.svg .
-          cp -f artifacts/views.svg .
+          for f in snake trophies codestats typing wakatime views; do
+            [ -f "artifacts/$f.svg" ] && cp -f "artifacts/$f.svg" .
+          done
           rm -rf artifacts
 
       - uses: stefanzweifel/git-auto-commit-action@v7
