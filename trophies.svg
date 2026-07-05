@@ -1,8 +1,8 @@
 
     <svg
-      width="330"
+      width="440"
       height="110"
-      viewBox="0 0 330 110"
+      viewBox="0 0 440 110"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -311,7 +311,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
   
           <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="#00cc00">Commits</text>
           <text x="50%" y="85" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10.5" fill="#00cc00">High Committer</text>
-          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#00cc00">100pt</text>
+          <text x="50%" y="97" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="10" fill="#00cc00">102pt</text>
           
     <style>
     @keyframes CommitsRankAnimation {
@@ -319,7 +319,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         width: 0px;
       }
       to {
-        width: 0px;
+        width: 1.6px;
       }
     }
     #Commits-rank-progress{
@@ -347,8 +347,8 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         </svg>
         
         <svg
-          x="0"
-          y="110"
+          x="330"
+          y="0"
           width="110"
           height="110"
           viewBox="0 0 110 110"
@@ -448,7 +448,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         </svg>
         
         <svg
-          x="110"
+          x="0"
           y="110"
           width="110"
           height="110"
@@ -528,7 +528,7 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         </svg>
         
         <svg
-          x="220"
+          x="110"
           y="110"
           width="110"
           height="110"
@@ -608,8 +608,8 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         </svg>
         
         <svg
-          x="0"
-          y="220"
+          x="220"
+          y="110"
           width="110"
           height="110"
           viewBox="0 0 110 110"
@@ -688,8 +688,8 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
         </svg>
         
         <svg
-          x="110"
-          y="220"
+          x="330"
+          y="110"
           width="110"
           height="110"
           viewBox="0 0 110 110"
