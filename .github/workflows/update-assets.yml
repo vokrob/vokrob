@@ -154,6 +154,7 @@ jobs:
       - name: Stage Assets
         run: |
           cp -f artifacts/snake.svg .
+          cp -f artifacts/trophies.svg .
           cp -f artifacts/codestats.svg .
           cp -f artifacts/typing.svg .
           cp -f artifacts/wakatime.svg .
