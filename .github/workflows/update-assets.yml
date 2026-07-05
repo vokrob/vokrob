@@ -26,7 +26,9 @@ jobs:
             snake.svg
 
       - name: Validate SVG
-        run: xmllint --noout snake.svg
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          xmllint --noout snake.svg
 
       - uses: actions/upload-artifact@v7
         with:
@@ -48,7 +50,9 @@ jobs:
             "https://github-profile-trophy-nu.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true&row=1&column=3"
 
       - name: Validate SVG
-        run: xmllint --noout trophies.svg
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          xmllint --noout trophies.svg
 
       - uses: actions/upload-artifact@v7
         with:
@@ -70,7 +74,9 @@ jobs:
             "https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=15"
 
       - name: Validate SVG
-        run: xmllint --noout codestats.svg
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          xmllint --noout codestats.svg
 
       - uses: actions/upload-artifact@v7
         with:
@@ -85,6 +91,9 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v7
+
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
       - name: Fetch Typing SVG
         run: |
