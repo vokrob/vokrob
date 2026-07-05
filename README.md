@@ -28,7 +28,7 @@ ___
 
 ___
 
-<img src="https://raw.githubusercontent.com/vokrob/vokrob/main/snake.svg" width="1500" alt="Snake animation" />
+<img src="https://raw.githubusercontent.com/vokrob/vokrob/main/snake.svg?v=2" width="1500" alt="Snake animation" />
 
 ___
 
