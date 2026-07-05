@@ -28,10 +28,7 @@ ___
 
 ___
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vokrob/vokrob/main/snake-dark.svg" />
-  <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/snake.svg" width="1500" alt="Snake animation" />
-</picture>
+<img src="https://raw.githubusercontent.com/vokrob/vokrob/main/snake.svg" width="1500" alt="Snake animation" />
 
 ___
 

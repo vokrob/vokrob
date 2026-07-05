@@ -22,22 +22,17 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: vokrob
-          outputs: |
-            snake.svg
-            snake-dark.svg?palette=github-dark
+          outputs: snake.svg?palette=github-dark
 
       - name: Validate SVG
         run: |
           sudo apt-get update && sudo apt-get install -y libxml2-utils
           xmllint --noout snake.svg
-          xmllint --noout snake-dark.svg
 
       - uses: actions/upload-artifact@v7
         with:
           name: snake
-          path: |
-            snake.svg
-            snake-dark.svg
+          path: snake.svg
           if-no-files-found: error
 
   trophies:
@@ -159,7 +154,6 @@ jobs:
       - name: Stage Assets
         run: |
           cp -f artifacts/snake.svg .
-          cp -f artifacts/snake-dark.svg .
           cp -f artifacts/codestats.svg .
           cp -f artifacts/typing.svg .
           cp -f artifacts/wakatime.svg .
@@ -171,4 +165,4 @@ jobs:
           commit_message: 'chore: update profile assets'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          file_pattern: 'snake.svg snake-dark.svg trophies.svg codestats.svg typing.svg wakatime.svg views.svg'
+          file_pattern: 'snake.svg trophies.svg codestats.svg typing.svg wakatime.svg views.svg'
