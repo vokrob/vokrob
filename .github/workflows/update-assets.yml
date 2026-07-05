@@ -122,14 +122,14 @@ jobs:
         continue-on-error: true
         run: |
           curl -sfSL --retry 3 --retry-delay 5 --max-time 30 -o wakatime.svg \
-            "https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg?color=178600"
+            "https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg?color=178600&_=$(date +%s)"
           xmllint --noout wakatime.svg
 
       - name: Fetch Profile Views Badge
         continue-on-error: true
         run: |
           curl -sfSL --retry 3 --retry-delay 5 --max-time 30 -o views.svg \
-            "https://komarev.com/ghpvc/?username=vokrob&color=178600"
+            "https://komarev.com/ghpvc/?username=vokrob&color=178600&_=$(date +%s)"
           xmllint --noout views.svg
 
       - uses: actions/upload-artifact@v7
