@@ -16,7 +16,7 @@ ___
 
 <div align="center">
   <a href="https://codestats.net/users/vokrob" target="_blank">
-    <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/codestats.svg" alt="Code::Stats history graph" />
+    <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/codestats.svg?v=2" alt="Code::Stats history graph" />
   </a>
 </div>
 
