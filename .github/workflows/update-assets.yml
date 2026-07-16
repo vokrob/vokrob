@@ -125,20 +125,12 @@ jobs:
             "https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg?color=178600&_=$(date +%s)"
           xmllint --noout wakatime.svg
 
-      - name: Fetch Profile Views Badge
-        continue-on-error: true
-        run: |
-          curl -sfSL --retry 3 --retry-delay 5 --max-time 30 -o views.svg \
-            "https://komarev.com/ghpvc/?username=vokrob&color=178600&_=$(date +%s)"
-          xmllint --noout views.svg
-
       - uses: actions/upload-artifact@v7
         with:
           name: badges
           path: |
             typing.svg
             wakatime.svg
-            views.svg
           if-no-files-found: warn
 
   commit:
@@ -159,7 +151,7 @@ jobs:
 
       - name: Stage Assets
         run: |
-          for f in snake trophies codestats typing wakatime views; do
+          for f in snake trophies codestats typing wakatime; do
             [ -f "artifacts/$f.svg" ] && cp -f "artifacts/$f.svg" .
           done
           rm -rf artifacts
@@ -169,4 +161,4 @@ jobs:
           commit_message: 'chore: update profile assets'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          file_pattern: 'snake.svg trophies.svg codestats.svg typing.svg wakatime.svg views.svg'
+          file_pattern: 'snake.svg trophies.svg codestats.svg typing.svg wakatime.svg'

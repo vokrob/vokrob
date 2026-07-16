@@ -33,5 +33,5 @@ ___
 ___
 
 <div align="right">
-  <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/views.svg" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=vokrob&color=178600" alt="Profile Views" />
 </div>
