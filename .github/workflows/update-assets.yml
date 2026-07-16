@@ -87,6 +87,13 @@ jobs:
             -e 's/#666/#178600/g' \
             codestats.svg
 
+      - name: Validate Dark Theme Applied
+        continue-on-error: true
+        run: |
+          if grep -qiE '#fff|#e8e8e8|#f0f0f0|#f5f5f5' codestats.svg; then
+            echo "::warning::Dark theme may not have applied fully"
+          fi
+
       - name: Validate SVG
         continue-on-error: true
         run: |
