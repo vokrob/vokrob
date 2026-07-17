@@ -13,11 +13,7 @@ jobs:
   snake:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    permissions:
-      contents: read
     steps:
-      - uses: actions/checkout@v7
-
       - name: Generate Contribution Snake
         continue-on-error: true
         uses: Platane/snk@v3
@@ -40,11 +36,7 @@ jobs:
   trophies:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    permissions:
-      contents: read
     steps:
-      - uses: actions/checkout@v7
-
       - name: Fetch Trophies SVG
         continue-on-error: true
         run: |
@@ -66,11 +58,7 @@ jobs:
   codestats:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    permissions:
-      contents: read
     steps:
-      - uses: actions/checkout@v7
-
       - name: Fetch Code::Stats Graph
         continue-on-error: true
         run: |
@@ -109,11 +97,7 @@ jobs:
   badges:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    permissions:
-      contents: read
     steps:
-      - uses: actions/checkout@v7
-
       - name: Install xmllint
         continue-on-error: true
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
