@@ -8,7 +8,7 @@ ___
 
 <p align="center">
   <a href="https://github-profile-trophy-nu.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true&row=1&column=3&title=Followers,Stars,Experience">
-    <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/trophies.svg?v=3" alt="trophy" />
+    <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/trophies.svg" alt="trophy" />
   </a>
 </p>
 
@@ -16,7 +16,7 @@ ___
 
 <div align="center">
   <a href="https://codestats.net/users/vokrob" target="_blank">
-    <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/codestats.svg?v=2" alt="Code::Stats history graph" />
+    <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/codestats.svg" alt="Code::Stats history graph" />
   </a>
 </div>
 
@@ -28,7 +28,7 @@ ___
 
 ___
 
-<img src="https://raw.githubusercontent.com/vokrob/vokrob/main/snake.svg?v=2" width="1500" alt="Snake animation" />
+<img src="https://raw.githubusercontent.com/vokrob/vokrob/main/snake.svg" width="1500" alt="Snake animation" />
 
 ___
 
