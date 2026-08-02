@@ -63,24 +63,7 @@ jobs:
         continue-on-error: true
         run: |
           curl -sfSL --retry 3 --retry-delay 5 -o codestats.svg \
-            "https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=15"
-
-      - name: Apply Dark Theme
-        continue-on-error: true
-        run: |
-          sed -i \
-            -e 's/#fff/#0d1117/g' \
-            -e 's/#e8e8e8/#0f4d00/g' \
-            -e 's/#ababab/#178600/g' \
-            -e 's/#666/#178600/g' \
-            codestats.svg
-
-      - name: Validate Dark Theme Applied
-        continue-on-error: true
-        run: |
-          if grep -qiE '#fff|#e8e8e8|#f0f0f0|#f5f5f5' codestats.svg; then
-            echo "::warning::Dark theme may not have applied fully"
-          fi
+            "https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=15&bg_color=0d1117&grid_color=0f4d00&text_color=178600&zeroline_color=178600"
 
       - name: Validate SVG
         continue-on-error: true
