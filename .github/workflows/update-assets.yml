@@ -22,9 +22,9 @@ jobs:
           outputs: snake.svg?palette=github-dark
 
       - name: Validate SVG
-        continue-on-error: true
         run: |
           sudo apt-get update && sudo apt-get install -y libxml2-utils
+          test -s snake.svg
           xmllint --noout snake.svg
 
       - uses: actions/upload-artifact@v7
@@ -44,9 +44,9 @@ jobs:
             "https://github-profile-trophy-nu.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true&row=1&column=4&_=$(date +%s)"
 
       - name: Validate SVG
-        continue-on-error: true
         run: |
           sudo apt-get update && sudo apt-get install -y libxml2-utils
+          test -s trophies.svg
           xmllint --noout trophies.svg
 
       - uses: actions/upload-artifact@v7
@@ -83,9 +83,9 @@ jobs:
             "https://codestats-readme.wegfan.cn/history-graph/vokrob?history_days=30&max_languages=15&bg_color=0d1117&grid_color=0f4d00&text_color=178600&zeroline_color=178600"
 
       - name: Validate SVG
-        continue-on-error: true
         run: |
           sudo apt-get update && sudo apt-get install -y libxml2-utils
+          test -s codestats.svg
           xmllint --noout codestats.svg
 
       - uses: actions/upload-artifact@v7
@@ -103,17 +103,17 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
       - name: Fetch Typing SVG
-        continue-on-error: true
         run: |
           curl -sfSL --retry 5 --retry-delay 10 --max-time 60 -o typing.svg \
             "https://readme-typing-svg.herokuapp.com/?font=Fira+Code&color=00FF00&background=FFFFFF00&lines=Welcome+to+my+profile;My+name+is+Danil+Borkov;I+am+a+DevOps+engineer&center=true"
+          test -s typing.svg
           xmllint --noout typing.svg
 
       - name: Fetch WakaTime Badge
-        continue-on-error: true
         run: |
           curl -sfSL --retry 3 --retry-delay 5 --max-time 30 -o wakatime.svg \
             "https://wakatime.com/badge/user/c2eea5ba-3079-4fa5-8d83-15f10e89cc66.svg?color=178600&_=$(date +%s)"
+          test -s wakatime.svg
           xmllint --noout wakatime.svg
 
       - uses: actions/upload-artifact@v7
