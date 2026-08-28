@@ -63,12 +63,13 @@ jobs:
         continue-on-error: true
         run: |
           curl -sfSL --retry 3 --retry-delay 5 -o streak.svg \
-            "https://streak-stats.demolab.com/?user=vokrob&theme=matrix&hide_border=true&_=$(date +%s)"
+            "https://streak-stats.vercel.app/?user=vokrob&theme=matrix&hide_border=true&_=$(date +%s)"
 
       - name: Validate SVG
-        continue-on-error: true
         run: |
           sudo apt-get update && sudo apt-get install -y libxml2-utils
+          test -s streak.svg
+          ! grep -qi 'failed to retrieve' streak.svg
           xmllint --noout streak.svg
 
       - uses: actions/upload-artifact@v7
