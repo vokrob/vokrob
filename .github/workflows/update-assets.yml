@@ -62,7 +62,7 @@ jobs:
       - name: Generate Streak Stats SVG
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
-          options: user=vokrob&theme=matrix&hide_border=true
+          options: user=vokrob&hide_border=true&background=FFFFFF00&ring=00ff00&fire=00ff00&currStreakNum=00ff00&sideNums=00cc00&currStreakLabel=00ff00&sideLabels=00cc00&dates=178600&stroke=00ff00&border=00ff00
           path: streak.svg
           token: ${{ github.token }}
 
