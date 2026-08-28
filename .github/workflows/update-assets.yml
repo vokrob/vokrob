@@ -55,6 +55,28 @@ jobs:
           path: trophies.svg
           if-no-files-found: warn
 
+  streak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch Streak Stats SVG
+        continue-on-error: true
+        run: |
+          curl -sfSL --retry 3 --retry-delay 5 -o streak.svg \
+            "https://streak-stats.demolab.com/?user=vokrob&theme=matrix&hide_border=true&_=$(date +%s)"
+
+      - name: Validate SVG
+        continue-on-error: true
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          xmllint --noout streak.svg
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: streak
+          path: streak.svg
+          if-no-files-found: warn
+
   codestats:
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -108,7 +130,7 @@ jobs:
           if-no-files-found: warn
 
   commit:
-    needs: [snake, trophies, codestats, badges]
+    needs: [snake, trophies, streak, codestats, badges]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -125,7 +147,7 @@ jobs:
 
       - name: Stage Assets
         run: |
-          for f in snake trophies codestats typing wakatime; do
+          for f in snake trophies streak codestats typing wakatime; do
             [ -f "artifacts/$f.svg" ] && cp -f "artifacts/$f.svg" .
           done
           rm -rf artifacts
@@ -135,4 +157,4 @@ jobs:
           commit_message: 'chore: update profile assets'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          file_pattern: 'snake.svg trophies.svg codestats.svg typing.svg wakatime.svg'
+          file_pattern: 'snake.svg trophies.svg streak.svg codestats.svg typing.svg wakatime.svg'

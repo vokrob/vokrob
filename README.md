@@ -6,6 +6,14 @@
 
 ___
 
+<div align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/streak.svg" alt="GitHub streak stats" />
+  </a>
+</div>
+
+___
+
 <p align="center">
   <a href="https://github-profile-trophy-nu.vercel.app/?username=vokrob&theme=matrix&no-frame=true&no-bg=true&row=1&column=4">
     <img src="https://raw.githubusercontent.com/vokrob/vokrob/main/trophies.svg" alt="GitHub profile trophies ranking" />
