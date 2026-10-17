@@ -41,5 +41,5 @@ ___
 ___
 
 <div align="right">
-  <img src="https://komarev.com/ghpvc/?username=vokrob&color=178600" alt="GitHub profile view counter" />
+  <img src="https://vokrob-views.vokrob-dev.workers.dev/" alt="GitHub profile view counter" />
 </div>
